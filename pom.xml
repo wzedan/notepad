@@ -27,12 +27,12 @@
 		<selenium.browser>firefox</selenium.browser>
 	</properties>
 
-	<scm>
+	<!--<scm>
 		<connection>scm:git:git@github.com/wzedan/notepad.git</connection>
 		<developerConnection>scm:git:git@github.com/wzedan/notepad.git</developerConnection>
 		<url>scm:git:git@github.com/wzedan/notepad.git</url>
 		<tag>HEAD</tag>
-	</scm>
+	</scm>-->
 
 	<distributionManagement>
 		<repository>
