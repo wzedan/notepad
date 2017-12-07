@@ -1,0 +1,10 @@
+checkout scm
+    docker.image('mysql:5').withRun('-e "MYSQL_ROOT_PASSWORD=my-secret-pw"') { mysql ->
+        docker.image('maven:3-alpine').inside("--link ${mysql.id}:mysql -e ENV_TEST_MYSQL_HOST=mysql"") {
+            /*
+             * Run some tests which require MySQL, and assume that it is
+             * available on the host name `mysql`
+             */
+            sh 'mvn clean verify'
+        }
+    }
